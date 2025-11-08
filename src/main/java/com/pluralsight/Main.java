@@ -8,12 +8,12 @@ public class Main {
         while (true) {
             System.out.println("""
                     --------------------------
-                          Home Screen
+                          Penn Station
                     ---------------------------
                     1) New order
                     0) Exit      
                     ----------------------------
-                    
+                    1
                     
                     """);
 

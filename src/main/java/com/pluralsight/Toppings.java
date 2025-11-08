@@ -1,59 +1,46 @@
 package com.pluralsight;
 
 public class Toppings {
-//constructor
     private String name;
     private String category;
     private double price;
-    private boolean extras;
+    private int extras; // number of extras
 
-//Getters and setters
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    // Constructor
+    public Toppings(String name, String category, double price) {
         this.name = name;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
         this.category = category;
-    }
-
-    public double getPrice() {
-        return price *(1 + extras);
-    }
-
-    public void setPrice(double price) {
         this.price = price;
     }
 
-    public boolean getExtras() {
-        return extras;
+    // Getters and Setters
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getCategory() { return category; }
+    public void setCategory(String category) { this.category = category; }
+
+    public double getPrice() {
+        return price * (1 + extras); // price increases per extra
     }
 
-    public void setExtras(boolean extras) {
-        this.extras = extras;
-    }
+    public void setPrice(double price) { this.price = price; }
+
+    public int getExtras() { return extras; }
+    public void setExtras(int extras) { this.extras = extras; }
 
     @Override
     public String toString() {
         return "Toppings{" +
                 "name='" + name + '\'' +
                 ", category='" + category + '\'' +
-                ", price=" + price +
+                ", price=" + getPrice() +
                 ", extras=" + extras +
                 '}';
     }
 
-    public Toppings(String name, String category, double price, int extras) {
-
-    }
-
+    // You don’t need this unless you want to merge toppings
     public void add(Toppings toppings) {
+        // empty or custom logic
     }
 }

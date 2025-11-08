@@ -16,6 +16,9 @@ public class Sandwich {
         this.bread = bread;
     }
 
+    public void AddToppings(Toppings topping) {
+    }
+
     public class AddSandwich {
 
         public static void AddSandwich() {  // ← Make it public and static
