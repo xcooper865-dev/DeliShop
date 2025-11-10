@@ -26,3 +26,21 @@ public class SelectToppings {
     );
 
 }
+
+
+private static final Map<String, Double> SAUCES = Map.of(
+        "mayo", 0.25, "mustard", 0.25, "ketchup", 0.25,
+        "ranch", 0.75, "thousand island", 0.75, "vinaigrette", 1.00);
+
+
+// this method is called when cx is building a sub
+//walks the cx through each topping in each categorey
+public static void AddToppingsTosandwich(Sandwich sandwich) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("\n------- Add Toppings -------");
+    //topping category which cx will be walked through
+    selectCategory(scanner, "Meats", MEATS, sandwich);
+    selectCategory(scanner, "Cheese", CHEESE, sandwich);
+    selectCategory(scanner, "Regular Toppings", REG_TOPPINGS, sandwich);
+    selectCategory(scanner, "Sauces", SAUCES, sandwich);
+}
