@@ -57,6 +57,9 @@ public class Sandwich extends MenuItems { // extends MenuItems using base items 
         String toastedChoice = scanner.nextLine().trim().toLowerCase();
         sandwich.setToasted(toastedChoice.equals("y"));// toasted if cx enters Y
 
+        SelectToppings.AddToppingsTosandwich(sandwich);
+
+
         // You can add toppings here if needed
 
         System.out.println("Added to cart: " + sandwich);//confirm what was added to cx order

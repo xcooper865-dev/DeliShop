@@ -34,4 +34,8 @@ public abstract class MenuItems {
 
     public void AddToppings(Toppings topping) {
     }
+
+    public Toppings[] getToppings() {
+        return new Toppings[0];
+    }
 }
