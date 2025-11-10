@@ -64,6 +64,28 @@ public class OrderMenu {
             //display each items description and price
             System.out.println(item.getDescription() + " - $" + item.getTotalPrice());
 
+            total += item.getTotalPrice();//add items price to the total
+        }
+        System.out.printf("\nTOTAL: $%.2f%n", total);//display total price in two decimal places
+        System.out.println("=====================");
+
+        String filename = ReceiptFileManager.saveReceipt(currentOrder, total);//save the receipt to file which uses ReceiptFileManager
+
+        if (filename != null) {//check if reciept was saved successfully
+
+            System.out.println("\n✓ Receipt saved to: " + filename);//shows file location and success message for cx
+        } else {
+            System.out.println("\n✗ Failed to save receipt");//shows error if save failed
+        }
+
+        // Clear the order after successful checkout
+        currentOrder.clear();
+        System.out.println("\nThank you for your order!");//displays thank you to cx
+    }
+}
+
+
+
 
 
 
