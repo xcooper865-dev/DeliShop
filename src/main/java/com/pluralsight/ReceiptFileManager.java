@@ -70,22 +70,8 @@ public class ReceiptFileManager {
 
             // 🔽 NEW CODE BELOW — shows sandwich toppings and extras
             // If the item is a sandwich, list all toppings underneath it
-            if (item instanceof Sandwich sandwich) {
 
-                // Loop through each topping added to this sandwich
-                for (Toppings topping : sandwich.getToppings()) {
 
-                    // If extras were added, label how many
-                    String extraText = topping.getExtras() > 0
-                            ? " + " + topping.getExtras() + " extra(s)"
-                            : "";
-
-                    // Print each topping indented under the sandwich
-                    printWriter.printf("   - %-25s $%5.2f%n",
-                            topping.getName() + extraText,
-                            topping.getPrice());
-                }
-            }
         }
 
         // Total

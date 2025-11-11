@@ -82,21 +82,50 @@ public class Sandwich extends MenuItems { // extends MenuItems using base items 
             case "12\"" -> 12.00;
             default -> 7.00;//default to 8 inch if invaild size is picked
         };
+        double total = basePrice;
 
+//Loop through selected sandwich toppings
         for (Toppings t : toppings) {
-            basePrice += t.getPrice();//add price of topping to base price of sub
+            //Prices for MEAT toppings
+            if (t.getCategory().equals("MEAT")) {
+                //Cost varies by sandwich size and whether it's an extra portion
+                if (size.equals("4")) total += t.isExtras() ?   0.50 : 1.00;
+                else if (size.equals("8")) total += t.isExtras() ? 1.00 : 2.00;
+                else if (size.equals("12")) total += t.isExtras() ? 1.50 : 3.00;
+            }
+            //Price rules for CHEESE toppings
+            else if (t.getCategory().equals("CHEESE")) {
+                if (size.equals("4")) total += t.isExtras() ? 0.30 : 0.75;
+                else if (size.equals("8")) total += t.isExtras() ? 0.60 : 1.50;
+                else if (size.equals("12")) total += t.isExtras() ? 0.90 : 2.25;
+            }
         }
 
-        return basePrice;// return the total price
+        return total;
     }
 
     @Override
     public String getDescription() {// returns description of sub based on bread size if toasted
-        return size + " sandwich on " + bread + (toasted ? " (toasted)" : "");
+        StringBuilder sb = new StringBuilder();
+        sb.append(size)//add the size
+                .append("\" ")
+                .append(bread) //add bread type
+                .append("(Toasted: ")
+                .append(toasted) //add true/false if toasted
+                .append(")\nToppings: "); //closes parenthesis, new line, then "Toppings:"
+
+        for (Toppings t : toppings) {
+            sb.append(t.getName()); //Add topping name
+            if (t.isExtras()) sb.append("(extra)"); //Mark extra
+            sb.append(", "); //Separator
+        }
+        return sb.toString();
     }
 
     @Override
-    public double getTotalPrice() {//returns total price
+    public double getTotalPrice() {
         return getPrice();
     }
+
+
 }

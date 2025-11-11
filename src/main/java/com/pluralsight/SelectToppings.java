@@ -25,7 +25,7 @@ public class SelectToppings {
             Map.entry("mushrooms", 0.75)
     );
 
-    private static final Map<String, Double> SAUCES = Map.of(
+   private static final Map<String, Double> SAUCES = Map.of(
             "mayo", 0.25, "mustard", 0.25, "ketchup", 0.25,
             "ranch", 0.75, "thousand island", 0.75, "vinaigrette", 1.00);
 
@@ -74,14 +74,7 @@ public class SelectToppings {
             } catch (NumberFormatException e) {
                 System.out.println("Invalid number, using 0 extras.");
             }
-
-            // Create and add topping and extras if selected
-            Toppings topping = new Toppings(choice, category, price);
-            topping.setExtras(extras);
-            sandwich.addTopping(topping); // adds topping to each sub
-
-            System.out.println("✅ " + choice + " added with " + extras + " extra(s)! Total topping price: $" +
-                    String.format("%.2f", topping.getPrice())); // confirms the topping selection for the cx
         }
     }
+
 }
