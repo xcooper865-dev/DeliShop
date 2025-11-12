@@ -8,10 +8,9 @@ public class Drinks extends MenuItems {// extends Menuitems and inherits its bas
     private String flavor;
 
     //Constructor
-    public Drinks(String size, String flavor, double price) {
 
-        //calls the parent with a name and price
-        super("Drink (" + flavor + ")", price);
+
+    public Drinks(String size, String flavor) {
         this.size = size;
         this.flavor = flavor;
     }
@@ -56,7 +55,7 @@ public class Drinks extends MenuItems {// extends Menuitems and inherits its bas
         };
 
         //Drink object created with the select size, flavor& price
-        Drinks drinks = new Drinks(size, flavor, price);
+        Drinks drinks = new Drinks(size, flavor);
 
         System.out.println("Added to cart: " + drinks);//confirms to the cx that the drink was added to cart
         return drinks;
@@ -64,14 +63,20 @@ public class Drinks extends MenuItems {// extends Menuitems and inherits its bas
 
 
     @Override
-    public String getDescription() {
-        return size + " " + flavor; //description of the drink and flavor combined
+    public double getPrice() {
+        if(size.equals("S"))
+            return 2.00;
+        else if(size.equals("M"))
+            return 2.50;
+        else
+            return 3.00;
     }
 
     @Override
-    public double getTotalPrice() {//price based drink size
-        return getPrice();
+    public String getDescription() {
+        return size + "Drinks (" + flavor + ")" ;//description of the drink and flavor combined
     }
+
 
     @Override
     public String toString() { // formats the sring with size,flavor & price

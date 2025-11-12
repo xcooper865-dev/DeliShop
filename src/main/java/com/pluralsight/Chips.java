@@ -4,20 +4,23 @@ import java.util.Scanner;
 
 public class Chips extends MenuItems {
 
-    //constructor
-    public Chips(String name, double price) {
-        super(name, price);
+    private String flavor;
+
+    public Chips(String flavor) {
+        this.flavor = flavor;
+
+    }
+
+    @Override
+    public double getPrice() {
+        return 1.50;
     }
 
     @Override
     public String getDescription() {
-        return getName(); //return name of chips that are selected
+        return"chips("+ flavor + ")"; //return name of chips that are selected
     }
 
-    @Override
-    public double getTotalPrice() {
-        return getPrice(); // returns total price of the chips selected
-    }
 
     public static Chips AddChips() { //the method being static allows cx to add chips to order
         Scanner scanner = new Scanner(System.in); //Scanner reads user input
@@ -34,39 +37,39 @@ public class Chips extends MenuItems {
         System.out.println("6) Sour Cream & Onion ($2.50)");
 
         String choice = scanner.nextLine();//reads out user input
-        String chipName = "Classic Lays"; // default Chips
-        double price = 2.00;              // default price
+        String flavor = "Classic Lays"; // default Chips
+                    // default price
 
         switch (choice) { //sets the Chip name and price accordinly to the users choice
             case "1" -> {
-                chipName = "Classic Lays";
-                price = 2.00;
+               flavor  = "Classic Lays";
+              break;
             }
             case "2" -> {
-                chipName = "Baked Jalapeno";
-                price = 3.50;
+                flavor = "Baked Jalapeno";
+                break;
             }
             case "3" -> {
-                chipName = "Cheetos";
-                price = 2.00;
+                flavor = "Cheetos";
+                break;
             }
             case "4" -> {
-                chipName = "Hot Cheetos";
-                price = 2.75;
+                flavor = "Hot Cheetos";
+                 break;
             }
             case "5" -> {
-                chipName = "BBQ Chips";
-                price = 2.00;
+                flavor = "BBQ Chips";
+                break;
             }
             case "6" -> {
-                chipName = "Sour Cream & Onion";
-                price = 2.50;
+                flavor = "Sour Cream & Onion";
+                break;
             }
             //if cx eneter anything other than 1-6 system default to lays
-            default -> System.out.println("Invalid choice, defaulting to Classic Lays");
+            default -> System.out.println("Invalid choice, defaulting to Classic Lays chips");
         }
 
-        Chips chips = new Chips(chipName, price); //a new Chip object created with the name and price
+        Chips chips = new Chips(flavor); //a new Chip object created with the name and price
         System.out.println("Added to cart: " + chips); //tells the cx the chips have been added
         return chips;
     }

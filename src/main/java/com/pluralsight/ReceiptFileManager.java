@@ -66,9 +66,9 @@ public class ReceiptFileManager {
             // Print the main menu item (Sandwich, Drink, Chips, etc.)
             printWriter.printf("%-30s $%6.2f%n",
                     item.getDescription(),
-                    item.getTotalPrice());
+                    item.getPrice());
 
-            // 🔽 NEW CODE BELOW — shows sandwich toppings and extras
+
             // If the item is a sandwich, list all toppings underneath it
 
 
