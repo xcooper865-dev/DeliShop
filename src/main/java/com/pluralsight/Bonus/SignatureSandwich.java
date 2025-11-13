@@ -5,9 +5,9 @@ import com.pluralsight.models.Toppings;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SignatureSandwich {
+public class SignatureSandwich {  //predefined sandwich
 
-    private String signatureName;
+    private String signatureName;//instance variables
     private String size;
     private String bread;
     private boolean toasted;
@@ -58,9 +58,11 @@ public class SignatureSandwich {
         return sb.toString();
     }
 
-    // ---------- Factory Methods ----------
+    // ---------- Factory Methods ---------- // or prebuilt sandwiches with default topping on them
     public static SignatureSandwich createBLT(String size) {
         SignatureSandwich sandwich = new SignatureSandwich(size, "White", "BLT");
+
+        //blt toppings
         sandwich.addTopping(new Toppings("Bacon", "MEAT", false));
         sandwich.addTopping(new Toppings("Cheddar Cheese", "CHEESE", false));
         sandwich.addTopping(new Toppings("Lettuce", "REGULAR", false));
@@ -71,6 +73,8 @@ public class SignatureSandwich {
 
     public static SignatureSandwich createPhillyCheesesteak(String size) {
         SignatureSandwich sandwich = new SignatureSandwich(size, "White", "Philly Cheesesteak");
+
+        //philly toppings
         sandwich.addTopping(new Toppings("Steak", "MEAT", false));
         sandwich.addTopping(new Toppings("American Cheese", "CHEESE", false));
         sandwich.addTopping(new Toppings("Peppers", "REGULAR", false));

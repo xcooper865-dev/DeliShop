@@ -2,6 +2,7 @@ package com.pluralsight.Bonus;
 
 import com.pluralsight.UserInterFace.ConsoleHelper;
 
+
 public  class SignatureSandwichMenu {
 
     private String SignatureName;
@@ -40,21 +41,19 @@ public  class SignatureSandwichMenu {
 
         String size = ConsoleHelper.promptForString("Choose size (4\", 8\", or 12\"): ").trim();
 
-        switch (choice) {
-            case "1" -> {
-                SignatureSandwich blt = SignatureSandwich.createBLT(size);
-                System.out.println("\n✓ Created: " + blt.getDescription());
-                return blt;
+        //SignatureSandwich sandwich= switch (choice) {
+            SignatureSandwich sandwich = switch (choice) {
+                case "1" -> SignatureSandwich.createBLT(size);
+                case "2" -> SignatureSandwich.createPhillyCheesesteak(size);
+
+                default -> {
+                    System.out.println("Invalid choice, returning to menu.");
+                    yield null;
             }
-            case "2" -> {
-                SignatureSandwich philly = SignatureSandwich.createPhillyCheesesteak(size);
-                System.out.println("\n✓ Created: " + philly.getDescription());
-                return philly;
-            }
-            default -> {
-                System.out.println("Invalid choice.");
-                return null;
-            }
-        }
+        };
+        if (sandwich != null) {
+            System.out.println("\n✓ Signature sandwich created!");
     }
+    return sandwich;
+}
 }

@@ -1,18 +1,17 @@
 ========================================
           Penn Station       
 ========================================
-Date: 11/12/2025 13:40:27
+Date: 11/12/2025 19:45:41
 ========================================
 
 ITEMS:
 ----------------------------------------
-4" white (Toasted: true)
-Toppings: HAm (extra), Bacon (extra), chicken, swiss (extra), American (extra), Lettuce, Tomato, Onion, Jalapenos, cucomber, Mushrooms $  8.10
+8" white (Toasted: false)
+No toppings added. $  7.00
 SmallDrinks (Lemonade)         $  3.00
 ----------------------------------------
-TOTAL:                         $ 11.10
+TOTAL:                         $ 10.00
 ========================================
 
       Thank you for your order!
 ========================================
-1

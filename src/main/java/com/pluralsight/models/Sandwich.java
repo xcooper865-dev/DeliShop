@@ -17,6 +17,10 @@ public class Sandwich extends MenuItems {
         this.toasted = toasted;
     }
 
+    public Sandwich() {
+
+    }
+
     public String getSize() {
         return size;
     }
