@@ -1,0 +1,20 @@
+========================================
+          Penn Station       
+========================================
+Date: 11/13/2025 15:53:35
+========================================
+
+ITEMS:
+----------------------------------------
+(Large)Drinks (Cheerwine)      $  3.00
+chips(Classic Lays)            $  1.50
+8" white (Toasted: true)
+Toppings: Bacon (extra), chicken (extra), swiss (extra), American, Lettuce, Tomato, Mayo, Ranch, au jus $ 16.60
+8" White (Toasted: true)
+Toppings: American Cheese, Peppers, Mayo $  8.50
+----------------------------------------
+TOTAL:                         $ 29.60
+========================================
+
+      Thank you for your order!
+========================================

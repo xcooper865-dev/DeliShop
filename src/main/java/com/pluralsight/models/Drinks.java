@@ -21,16 +21,16 @@ public class Drinks extends MenuItems {// extends Menuitems and inherits its bas
 
         System.out.println("Choose Size");//displays size and also gives diffrent choices
         System.out.println("1) Small ($2.00)");
-        System.out.println("2) Medium ($2.85)");
-        System.out.println("3) Large  ($3.50)");
+        System.out.println("2) Medium ($2.50)");
+        System.out.println("3) Large  ($3.00)");
         String sizeChoice = scanner.nextLine();
 
         String size; // size choice and sets the size name and price of each size
         double price;
         switch (sizeChoice) {
             case "1" -> { size = "(Small)"; price = 2.00; }
-            case "2" -> { size = "(Medium)"; price = 2.85; }
-            case "3" -> { size = "(Large)"; price = 3.50; }
+            case "2" -> { size = "(Medium)"; price = 2.50; }
+            case "3" -> { size = "(Large)"; price = 3.00; }
             //default size if 1-3 isnt selected
             default -> { size = "(Small)"; price = 2.00; }
         }

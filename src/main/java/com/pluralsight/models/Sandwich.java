@@ -26,27 +26,71 @@ public class Sandwich extends MenuItems { // sandwich class represent a sandwich
     public void addTopping(Toppings t) { toppings.add(t); }//add topping to sandwich
 
     public double getExtraPrice(Toppings t) {
-        if (!t.isExtras()) return 0; // Only extras cost money
+
+      //  if (!t.isExtras()) return 0; // Only extras cost money
 
         String category = t.getCategory().toUpperCase(); // normalize category to uppercase
         double price = 0;
 
         switch (category) {
-            case "MEAT" -> {//price based on sandwich size
-                switch (size) {
-                    case "4" -> price = 0.50;
-                    case "8" -> price = 1.00;
-                    case "12" -> price = 1.50;
+
+                case "MEAT" -> {//price based on sandwich size
+
+                    switch (size) {
+                        case "4" -> {
+                            if (t.isExtras()) {
+                                price = 1.50;
+                            } else {
+                                price = 1;
+                            }
+                        }
+                        case "8" -> {
+                            if (t.isExtras()) {
+                                price = 3.00;
+                            } else {
+                                price = 2;
+                            }
+                        }
+                        case "12" -> {
+                            if (t.isExtras()) {
+                                price = 4.50;
+                            } else {
+                                price = 3;
+                            }
+                        }
+                    }
                 }
-            }
-            case "CHEESE" -> {//price based on sandwich size
-                switch (size) {
-                    case "4" -> price = 0.30;
-                    case "8" -> price = 0.60;
-                    case "12" -> price = 0.90;
+
+
+                case "CHEESE" -> {//price based on sandwich size
+                    switch (size) {
+
+                        case "4" -> {
+                            if (t.isExtras()) {
+                                price = 1.05;
+                            } else {
+                                price = .75;
+                            }
+                        }
+                        case "8" -> {
+                            if (t.isExtras()) {
+                                price = 2.10;
+                            } else {
+                                price = 1.50;
+                            }
+                        }
+                        case "12" ->{
+                            if (t.isExtras()) {
+                                price = 3.15;
+                            } else {
+                                price = 2.25;
+                            }
+                        }
+                    }
                 }
+
             }
-        }
+
         return price;
     }
 
@@ -63,7 +107,6 @@ public class Sandwich extends MenuItems { // sandwich class represent a sandwich
         for (Toppings t : toppings) {
             price += getExtraPrice(t);
         }
-
         return price;
     }
 

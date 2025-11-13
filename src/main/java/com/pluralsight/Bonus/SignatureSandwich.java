@@ -54,5 +54,5 @@ public class SignatureSandwich extends Sandwich {  // Predefined sandwich
         return sandwich;
     }
 
-    // No need to override getPrice() or getDescription(), inherited from Sandwich
+
 }

@@ -133,6 +133,7 @@ public class OrderMenu {
     // NESTED CLASS: ADD CUSTOM SANDWICH
     // ==================================
     private static class AddSandwich {
+
         public static Sandwich buildSandwich() {
             System.out.println("\n--- Add Sandwich ---");
 
@@ -181,16 +182,31 @@ public class OrderMenu {
             Sandwich s = new Sandwich(size, bread, toasted);
 
             // ===== EXTRA PRICING INFO =====
-            System.out.println("\n=== Extra Pricing ===");
-            System.out.println("Extra Meat:");
-            System.out.println("  4\"  -> $0.50");
-            System.out.println("  8\"  -> $1.00");
-            System.out.println(" 12\"  -> $1.50");
+            System.out.println("""
+                            === Pricing ===
+                    
+                    Base Price           Extra Pricing
+                                  Meats
+                    4"  -> $1.00;         4"  -> $0.50;
+                    8"  -> $2.00;         8"  -> $1.00;
+                    12" -> $3.00;         12" -> $1.50;
+              
+                                  Cheeses
+                    4"  -> $0.75;          4"  -> $0.30;
+                    8"  -> $1.50;          8"  -> $0.60;
+                    12" -> $2.25;          12" -> $0.90;
+                    """);
 
-            System.out.println("\nExtra Cheese:");
-            System.out.println("  4\"  -> $0.30");
-            System.out.println("  8\"  -> $0.60");
-            System.out.println(" 12\"  -> $0.90\n");
+//            System.out.println("\n=== Extra Pricing ===");
+//            System.out.println("Extra Meat:");
+//            System.out.println("  4\"  -> $0.50");
+//            System.out.println("  8\"  -> $1.00");
+//            System.out.println(" 12\"  -> $1.50");
+//
+//            System.out.println("\nExtra Cheese:");
+//            System.out.println("  4\"  -> $0.30");
+//            System.out.println("  8\"  -> $0.60");
+//            System.out.println(" 12\"  -> $0.90\n");
 
 
             // ===== TOPPINGS SELECTION =====

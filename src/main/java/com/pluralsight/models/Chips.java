@@ -22,19 +22,34 @@ public class Chips extends MenuItems { // chips clas represents bag of chips tha
     }
 
 
+    @Override
+    public String toString() {
+        return "Chips{" +
+                "flavor='" + flavor + '\'' +
+                '}';
+    }
+
     public static Chips AddChips() { //the method being static allows cx to add chips to order
         Scanner scanner = new Scanner(System.in); //Scanner reads user input
         System.out.println("\n===== ADD CHIPS ====="); //Chips menu header
         System.out.println("Choose your chips:");
-
+        System.out.println("""
+              ===== ADD CHIPS: All chips are $1.50!!! =====
+              1) Classic Lays
+              2) Baked Jalapeno Chips
+              3) Cheetos
+              4) Hot Cheetos
+              5) BBQ Chips
+              6) Sour Cream & Onion
+              """);
 
         //All avalible chips for cx
-        System.out.println("1) Classic Lays ($2.00)");
-        System.out.println("2) Baked Jalapeno Chips ($3.50)");
-        System.out.println("3) Cheetos ($2.00)");
-        System.out.println("4) Hot Cheetos ($2.75)");
-        System.out.println("5) BBQ Chips ($2.00)");
-        System.out.println("6) Sour Cream & Onion ($2.50)");
+//        System.out.println("1) Classic Lays ($1.50)");
+//        System.out.println("2) Baked Jalapeno Chips ($1.50)");
+//        System.out.println("3) Cheetos ($1.50)");
+//        System.out.println("4) Hot Cheetos ($1.50)");
+//        System.out.println("5) BBQ Chips ($1.50)");
+//        System.out.println("6) Sour Cream & Onion ($1.50)");
 
         String choice = scanner.nextLine();//reads out user input
         String flavor = "Classic Lays"; // default Chips
