@@ -1,91 +1,58 @@
 package com.pluralsight.Bonus;
 
+import com.pluralsight.models.Sandwich;
 import com.pluralsight.models.Toppings;
 
-import java.util.ArrayList;
-import java.util.List;
+public class SignatureSandwich extends Sandwich {  // Predefined sandwich
 
-public class SignatureSandwich {  //predefined sandwich
-
-    private String signatureName;//instance variables
-    private String size;
-    private String bread;
-    private boolean toasted;
-    private List<Toppings> toppings;
+    private String signatureName; // Sandwich name (e.g., BLT, Philly)
 
     // ---------- Constructor ----------
     public SignatureSandwich(String size, String bread, String signatureName) {
+        super(size, bread, true); // Call parent Sandwich constructor, toasted by default
         this.signatureName = signatureName;
-        this.size = size;
-        this.bread = bread;
-        this.toppings = new ArrayList<>();
-        this.toasted = true; // default toasted for signature sandwiches
     }
 
     // ---------- Methods ----------
-    public void addTopping(Toppings topping) {
-        toppings.add(topping);
-    }
-
-    public void setToasted(boolean toasted) {
-        this.toasted = toasted;
-    }
-
     public String getSignatureName() {
         return signatureName;
     }
 
-    public List<Toppings> getToppings() {
-        return toppings;
+    public void setSignatureName(String name) {
+        this.signatureName = name;
     }
 
-    public String getDescription() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(signatureName)
-                .append(" (").append(size).append(" ").append(bread).append(")")
-                .append(toasted ? " [Toasted]" : " [Not Toasted]")
-                .append("\nToppings: ");
-
-        for (Toppings t : toppings) {
-            sb.append(t.getName()).append(", ");
-        }
-
-        // Remove trailing comma
-        if (!toppings.isEmpty()) {
-            sb.setLength(sb.length() - 2);
-        }
-
-        return sb.toString();
+    @Override
+    public String toString() {
+        // Use the parent getDescription and prepend signature name
+        return signatureName + " - " + super.getDescription();
     }
 
-    // ---------- Factory Methods ---------- // or prebuilt sandwiches with default topping on them
-    public static SignatureSandwich createBLT(String size) {
-        SignatureSandwich sandwich = new SignatureSandwich(size, "White", "BLT");
+    // ---------- Factory Methods ----------
+    public static SignatureSandwich createBLT() {
+        SignatureSandwich sandwich = new SignatureSandwich("8", "White", "BLT");
 
-        //blt toppings
+        // Add BLT toppings
         sandwich.addTopping(new Toppings("Bacon", "MEAT", false));
         sandwich.addTopping(new Toppings("Cheddar Cheese", "CHEESE", false));
         sandwich.addTopping(new Toppings("Lettuce", "REGULAR", false));
         sandwich.addTopping(new Toppings("Tomato", "REGULAR", false));
         sandwich.addTopping(new Toppings("Ranch", "SAUCE", false));
+
         return sandwich;
     }
 
-    public static SignatureSandwich createPhillyCheesesteak(String size) {
-        SignatureSandwich sandwich = new SignatureSandwich(size, "White", "Philly Cheesesteak");
+    public static SignatureSandwich createPhillyCheesesteak() {
+        SignatureSandwich sandwich = new SignatureSandwich("8", "White", "Philly Cheesesteak");
 
-        //philly toppings
+        // Add Philly Cheesesteak toppings
         sandwich.addTopping(new Toppings("Steak", "MEAT", false));
         sandwich.addTopping(new Toppings("American Cheese", "CHEESE", false));
         sandwich.addTopping(new Toppings("Peppers", "REGULAR", false));
         sandwich.addTopping(new Toppings("Mayo", "SAUCE", false));
+
         return sandwich;
     }
 
-    @Override
-    public String toString() {
-        return getDescription();
-    }
-
-
+    // No need to override getPrice() or getDescription(), inherited from Sandwich
 }

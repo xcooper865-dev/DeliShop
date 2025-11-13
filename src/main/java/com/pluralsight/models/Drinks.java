@@ -9,7 +9,7 @@ public class Drinks extends MenuItems {// extends Menuitems and inherits its bas
 
 
 
-    //Constructor
+    //======Constructor======
     public Drinks(String size, String flavor) {
         this.size = size;
         this.flavor = flavor;
@@ -28,11 +28,11 @@ public class Drinks extends MenuItems {// extends Menuitems and inherits its bas
         String size; // size choice and sets the size name and price of each size
         double price;
         switch (sizeChoice) {
-            case "1" -> { size = "Small"; price = 2.00; }
-            case "2" -> { size = "Medium"; price = 2.85; }
-            case "3" -> { size = "Large"; price = 3.50; }
+            case "1" -> { size = "(Small)"; price = 2.00; }
+            case "2" -> { size = "(Medium)"; price = 2.85; }
+            case "3" -> { size = "(Large)"; price = 3.50; }
             //default size if 1-3 isnt selected
-            default -> { size = "Small"; price = 2.00; }
+            default -> { size = "(Small)"; price = 2.00; }
         }
 
         System.out.println("\nChoose Drink");//Flavor options and prompt cx for their choice of drink
