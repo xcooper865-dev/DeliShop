@@ -1,23 +1,23 @@
-package com.pluralsight;
+package com.pluralsight.models;
 
 import java.util.Scanner;
 
-public class Chips extends MenuItems {
+public class Chips extends MenuItems { // chips clas represents bag of chips that can be added to a order
 
-    private String flavor;
+    private String flavor;//instance variable to store flavor & type of chips
 
-    public Chips(String flavor) {
+    public Chips(String flavor) {//constructor
         this.flavor = flavor;
 
     }
 
     @Override
     public double getPrice() {
-        return 1.50;
+        return 1.50;//return price of chips all chips have a flat rate of $1.50
     }
 
     @Override
-    public String getDescription() {
+    public String getDescription() { //return description and the flavor
         return"chips("+ flavor + ")"; //return name of chips that are selected
     }
 
@@ -38,7 +38,7 @@ public class Chips extends MenuItems {
 
         String choice = scanner.nextLine();//reads out user input
         String flavor = "Classic Lays"; // default Chips
-                    // default price
+
 
         switch (choice) { //sets the Chip name and price accordinly to the users choice
             case "1" -> {

@@ -1,4 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.orders;
+
+import com.pluralsight.models.MenuItems;
 
 import java.io.FileWriter;
 import java.io.IOException;

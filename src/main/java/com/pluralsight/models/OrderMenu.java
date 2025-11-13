@@ -1,9 +1,10 @@
-package com.pluralsight;
+package com.pluralsight.models;
 
 
-import com.pluralsight.ReceiptFileManager;
-import com.pluralsight.*;
-
+import com.pluralsight.orders.ReceiptFileManager;
+import com.pluralsight.Bonus.SignatureSandwich;
+import com.pluralsight.Bonus.SignatureSandwichMenu;
+import com.pluralsight.UserInterFace.ConsoleHelper;
 
 
 import java.util.ArrayList;

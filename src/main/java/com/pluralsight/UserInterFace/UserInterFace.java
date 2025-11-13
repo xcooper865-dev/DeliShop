@@ -1,4 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.UserInterFace;
+
+import com.pluralsight.models.OrderMenu;
 
 public class UserInterFace {
     public void display(){

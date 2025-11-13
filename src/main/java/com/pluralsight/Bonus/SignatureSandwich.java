@@ -1,4 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.Bonus;
+
+import com.pluralsight.models.Toppings;
 
 import java.util.ArrayList;
 import java.util.List;

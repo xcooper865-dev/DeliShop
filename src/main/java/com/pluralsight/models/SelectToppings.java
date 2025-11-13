@@ -1,8 +1,8 @@
-package com.pluralsight;
+package com.pluralsight.models;
 
-public class SelectToppings {
+public class SelectToppings { // selectToppings help manage and validate topping selection
     
-    public static String [] Meats ={
+    public static String [] Meats ={ //premium toppings with size based pricing
             "steak",
             "HAm",
             "salami",
@@ -12,7 +12,7 @@ public class SelectToppings {
             
     };
     
-    public static String [] Cheese ={
+    public static String [] Cheese ={ //premium toppings with size based pricing
             "swiss",
             "provolone",
             "American",
@@ -20,7 +20,7 @@ public class SelectToppings {
             
     };
  
-    public static String [] Regular ={
+    public static String [] Regular ={// regular toppings that come are free
             "Lettuce",
             "Tomato",
             "Onion",
@@ -32,7 +32,7 @@ public class SelectToppings {
     }
             ;
 
-    public static String [] Sauce ={
+    public static String [] Sauce ={ // array of sauces
             "Mayo",
             "Mustard",
             "ketcup",
@@ -40,7 +40,7 @@ public class SelectToppings {
             "Thousand Island",
             "vinaigrette"
     };
-   public static String [] Sides ={
+   public static String [] Sides ={ //side of options that complement the sandwich
            
            "au jus",
            "sauce"
@@ -50,6 +50,7 @@ public class SelectToppings {
     private String category;
     private boolean extras;
 
+       // constructor
     public SelectToppings(String name, String category, boolean extras) {
         this.name = name;
         this.category = category;

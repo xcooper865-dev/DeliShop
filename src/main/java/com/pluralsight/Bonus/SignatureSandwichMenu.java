@@ -1,4 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.Bonus;
+
+import com.pluralsight.UserInterFace.ConsoleHelper;
 
 public  class SignatureSandwichMenu {
 

@@ -1,4 +1,4 @@
-package com.pluralsight;
+package com.pluralsight.models;
 
 import java.util.Scanner;
 
@@ -7,9 +7,9 @@ public class Drinks extends MenuItems {// extends Menuitems and inherits its bas
     private String size; // variables that store the size and flavor of the drink
     private String flavor;
 
+
+
     //Constructor
-
-
     public Drinks(String size, String flavor) {
         this.size = size;
         this.flavor = flavor;
@@ -50,7 +50,7 @@ public class Drinks extends MenuItems {// extends Menuitems and inherits its bas
             case "3" -> "Pepsi";
             case "4" -> "Cheerwine";
             case "5" -> "Fruit Punch";
-            //default to lemonade if 1-5 isnt selected
+            //default to lemonade if 1-5 isn't selected
             default -> "Lemonade";
         };
 
@@ -58,12 +58,12 @@ public class Drinks extends MenuItems {// extends Menuitems and inherits its bas
         Drinks drinks = new Drinks(size, flavor);
 
         System.out.println("Added to cart: " + drinks);//confirms to the cx that the drink was added to cart
-        return drinks;
+        return drinks;  //return drink to be added to the order
     }
 
 
     @Override
-    public double getPrice() {
+    public double getPrice() {//calculate and return the price based on the drink size
         if(size.equals("S"))
             return 2.00;
         else if(size.equals("M"))
@@ -79,7 +79,7 @@ public class Drinks extends MenuItems {// extends Menuitems and inherits its bas
 
 
     @Override
-    public String toString() { // formats the sring with size,flavor & price
+    public String toString() { // formats the string with size,flavor & price
         return size + " " + flavor + " ($" + getPrice() + ")";
     }
 }
