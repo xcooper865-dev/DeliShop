@@ -80,6 +80,11 @@ this code i had trouble with when trying to calculate the signature subs since t
 ![New Note](https://github.com/user-attachments/assets/f91aa69e-a4c9-4fbf-be97-59ff355c65c2)
 
 
+uml diagram 
+<img width="768" height="1024" alt="image" src="https://github.com/user-attachments/assets/694eec08-541f-480a-a869-75cb770e81c1" />
+
+
+
 
 
 
