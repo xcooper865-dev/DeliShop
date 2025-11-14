@@ -1,4 +1,4 @@
-This project is a Java based Sandwich Ordering System designed to simulate a real world deli or sub shop AKA PENN STATION ordering experience. It provides an interactive console menu that lets users build custom sandwiches, choose from signature sandwiches, add toppings, customize sizes, and calculate prices including extra charges for additional meat and cheese. the user has the option to choose from a variety of drinks and chips 
+This project is a Java based Sandwich Ordering System designed to simulate a real world deli or sub shop AKA PENN STATION ordering experience. It provides an interactive console menu that lets users build custom sandwiches, choose from signature sandwiches, add toppings, customize sizes of sub 4,8,12 and calculate prices including extra charges for additional meat and cheese. the user has the option to choose from a variety of drinks from Small,Meduium,Large and chips which is all at a base price 
 
 The system is organized using object-oriented programming principles, keeping responsibilities separated across multiple classes for easier maintenance, readability, and future expansion.
 
