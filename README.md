@@ -22,11 +22,13 @@ order menu
 
 
 custom sandwich options 
+promots to choose White,wheat ,rye, or a wrap
 
 ![New Note](https://github.com/user-attachments/assets/ae7ee234-50ef-4dba-a9e9-5de1ecfad6de)
 
 
 sandwich sizes and the cost 
+4,8,12
 
 ![New Note](https://github.com/user-attachments/assets/671277dd-6e3b-4203-950f-e9591dd50aa1)
 
@@ -37,7 +39,7 @@ premium topping and extra pricing screen for topping including all free toppings
 
 
 
-order conformatio screen which shows what you order 
+order conformation screen which shows what you order 
 
 
 ![New Note](https://github.com/user-attachments/assets/aa780e88-55ac-46d6-a458-627400357b71)
