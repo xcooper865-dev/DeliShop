@@ -77,7 +77,7 @@ check out screen
 
 
 
-a code i had fun coding was my chips menu wich extends menuitems 
+a code i had fun coding was my chips menu witch extends menuitems 
 
 
 ![New Note](https://github.com/user-attachments/assets/abe36c88-bc8b-47ea-9cf0-88a6da757569)
