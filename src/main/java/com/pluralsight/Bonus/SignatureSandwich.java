@@ -2,23 +2,23 @@ package com.pluralsight.Bonus;
 
 import com.pluralsight.models.Sandwich;
 import com.pluralsight.models.Toppings;
-
+                               //extends the sandwich class
 public class SignatureSandwich extends Sandwich {  // Predefined sandwich
 
     private String signatureName; // Sandwich name (e.g., BLT, Philly)
 
-    // ---------- Constructor ----------
+    // ---------- Constructor ----------// Call parent Sandwich constructor,
     public SignatureSandwich(String size, String bread, String signatureName) {
-        super(size, bread, true); // Call parent Sandwich constructor, toasted by default
-        this.signatureName = signatureName;
+        super(size, bread, true);  //toasted by default
+        this.signatureName = signatureName;//name of signature sandwich
     }
 
     // ---------- Methods ----------
     public String getSignatureName() {
-        return signatureName;
+        return signatureName;// return the name of BLT,Philly
     }
 
-    public void setSignatureName(String name) {
+    public void setSignatureName(String name) {//sets the name of the sandwich
         this.signatureName = name;
     }
 
@@ -39,7 +39,7 @@ public class SignatureSandwich extends Sandwich {  // Predefined sandwich
         sandwich.addTopping(new Toppings("Tomato", "REGULAR", false));
         sandwich.addTopping(new Toppings("Ranch", "SAUCE", false));
 
-        return sandwich;
+        return sandwich;// returns a fully loaded BLT
     }
 
     public static SignatureSandwich createPhillyCheesesteak() {
@@ -51,7 +51,7 @@ public class SignatureSandwich extends Sandwich {  // Predefined sandwich
         sandwich.addTopping(new Toppings("Peppers", "REGULAR", false));
         sandwich.addTopping(new Toppings("Mayo", "SAUCE", false));
 
-        return sandwich;
+        return sandwich;// returns a fully loaded Philly
     }
 
 

@@ -34,6 +34,7 @@ public class OrderMenu {
                     5) Check out
                     0) Cancel order
                     -----------------------------
+                    page 2
                     """);
 
             // Prompt the user for input and normalize it
@@ -181,7 +182,7 @@ public class OrderMenu {
             // Create sandwich object
             Sandwich s = new Sandwich(size, bread, toasted);
 
-            // ===== EXTRA PRICING INFO =====
+            // ===== EXTRA PRICING INFO =====   //pricing info
             System.out.println("""
                             === Pricing ===
                     
@@ -197,16 +198,6 @@ public class OrderMenu {
                     12" -> $2.25;          12" -> $0.90;
                     """);
 
-//            System.out.println("\n=== Extra Pricing ===");
-//            System.out.println("Extra Meat:");
-//            System.out.println("  4\"  -> $0.50");
-//            System.out.println("  8\"  -> $1.00");
-//            System.out.println(" 12\"  -> $1.50");
-//
-//            System.out.println("\nExtra Cheese:");
-//            System.out.println("  4\"  -> $0.30");
-//            System.out.println("  8\"  -> $0.60");
-//            System.out.println(" 12\"  -> $0.90\n");
 
 
             // ===== TOPPINGS SELECTION =====

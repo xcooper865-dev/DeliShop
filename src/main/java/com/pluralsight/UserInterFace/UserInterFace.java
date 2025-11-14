@@ -12,7 +12,7 @@ public class UserInterFace {
                     1) New order
                     0) Exit      
                     ----------------------------
-                    1
+                    Page 1
                     
                     """);
 

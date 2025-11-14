@@ -58,7 +58,7 @@ public class SelectToppings { // selectToppings help manage and validate topping
     }
     public static boolean isVAlidChoice(int choice,String [] options){
 
-        return choice >= 1 && choice <= options.length;
+        return choice >= 1 && choice <= options.length;//true if choice is valid 1 to option length  false otherwise
     }
 
 
