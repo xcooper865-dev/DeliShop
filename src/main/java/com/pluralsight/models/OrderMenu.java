@@ -29,10 +29,10 @@ public class OrderMenu {
                     =============================
                     1) Add Custom Sandwich 😊
                     2) Add Signature Sandwich ⭐
-                    3) Add Drink
-                    4) Add Chips
-                    5) Check out
-                    0) Cancel order
+                    3) Add Drink 🥤
+                    4) Add Chips 🍟
+                    5) Check out  💳
+                    0) Cancel order ❌
                     -----------------------------
                     page 2
                     """);
@@ -187,12 +187,12 @@ public class OrderMenu {
                             === Pricing ===
                     
                     Base Price           Extra Pricing
-                                  Meats
+                                 🍗Meats 🍗
                     4"  -> $1.00;         4"  -> $0.50;
                     8"  -> $2.00;         8"  -> $1.00;
                     12" -> $3.00;         12" -> $1.50;
               
-                                  Cheeses
+                                🧀 Cheeses 🧀
                     4"  -> $0.75;          4"  -> $0.30;
                     8"  -> $1.50;          8"  -> $0.60;
                     12" -> $2.25;          12" -> $0.90;
@@ -274,7 +274,7 @@ public class OrderMenu {
             double finalPrice = s.getPrice();
             System.out.println("\n========================================");
             System.out.println("     SANDWICH PLACED SUCCESSFULLY!"); // Confirmation message
-            System.out.println("   Thank you for choosing Penn station ");
+            System.out.println("  \uD83E\uDD6A Thank you for choosing Penn station \uD83E\uDD6A  ");
             System.out.println("========================================");
             System.out.println(s.getDescription()); // Print sandwich details
             System.out.println("\nTotal Sandwich Price: Extra $" + String.format("%.2f", finalPrice));

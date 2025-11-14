@@ -9,8 +9,8 @@ public class UserInterFace {
                     --------------------------
                           Penn Station
                     ---------------------------
-                    1) New order
-                    0) Exit      
+                    1) 🫣New order🥳
+                    0) Exit 🤨     
                     ----------------------------
                     Page 1
                     

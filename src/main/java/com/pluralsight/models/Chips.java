@@ -43,13 +43,6 @@ public class Chips extends MenuItems { // chips clas represents bag of chips tha
               6) Sour Cream & Onion
               """);
 
-        //All avalible chips for cx
-//        System.out.println("1) Classic Lays ($1.50)");
-//        System.out.println("2) Baked Jalapeno Chips ($1.50)");
-//        System.out.println("3) Cheetos ($1.50)");
-//        System.out.println("4) Hot Cheetos ($1.50)");
-//        System.out.println("5) BBQ Chips ($1.50)");
-//        System.out.println("6) Sour Cream & Onion ($1.50)");
 
         String choice = scanner.nextLine();//reads out user input
         String flavor = "Classic Lays"; // default Chips
@@ -80,7 +73,7 @@ public class Chips extends MenuItems { // chips clas represents bag of chips tha
                 flavor = "Sour Cream & Onion";
                 break;
             }
-            //if cx eneter anything other than 1-6 system default to lays
+            //if cx enter anything other than 1-6 system default to lays
             default -> System.out.println("Invalid choice, defaulting to Classic Lays chips");
         }
 

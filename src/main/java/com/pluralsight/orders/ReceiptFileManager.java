@@ -54,11 +54,11 @@ public class ReceiptFileManager {
         PrintWriter printWriter = new PrintWriter(fileWriter);
 
         // Header
-        printWriter.println("========================================");
-        printWriter.println("          Penn Station       ");
-        printWriter.println("========================================");
+        printWriter.println("============================================");
+        printWriter.println("    \uD83E\uDD6A Penn Station   \uD83C\uDF5F    ");
+        printWriter.println("=============================================");
         printWriter.println("Date: " + orderTime.format(
-                DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss")));
+                DateTimeFormatter.ofPattern("⏰MM/dd/yyyy HH:mm:ss⏳")));
         printWriter.println("========================================\n");
 
         // Items section — this now includes toppings for sandwiches
@@ -80,7 +80,7 @@ public class ReceiptFileManager {
         printWriter.println("----------------------------------------");
         printWriter.printf("%-30s $%6.2f%n", "TOTAL:", total);
         printWriter.println("========================================");
-        printWriter.println("\n      Thank you for your order!");
+        printWriter.println("\n  \uD83E\uDD73    Thank you for your order! \uD83E\uDD73");
         printWriter.println("========================================");
 
         // Close the writer to flush data to file
